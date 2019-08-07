@@ -1,4 +1,4 @@
-# 2次元CAモデルver1.0.0
+# 2次元CAモデルver1.0.1
 def print2d(listname):
     print("\n".join(list(map(str, cll))))
     return
@@ -63,7 +63,7 @@ print2djoin(cll)
 print("--------")
 # 10枚表示
 octr = 0
-for z in range(36):
+for z in range(28):
     lvlist = []
     # 延焼
 
@@ -142,7 +142,7 @@ for z in range(36):
         # フォーマット: [right(0), bottom(1), top(2), left(3)]
         # print("", movel, end=",")
         # print()
-
+        
         # 進行方向で条件分岐
         if movel[0]:
             cll[e[0]][e[1] + 1] = lv
@@ -153,9 +153,7 @@ for z in range(36):
         elif movel[2]:
             cll[e[0] - 1][e[1]] = lv
             cll[e[0]][e[1]] = nn
-        # elif movel[3]:
-        #     cll[e[0]][e[1] - 1] = lv
-        #     cll[e[0]][e[1]] = nn
-
-    print(print2djoin(cll), "octr:", octr)
+    
+    
+    print(print2djoin(cll), "octr:", octr, "| move:", z + 1)
     print("--------")
